@@ -1,0 +1,441 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <!--font awesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+        integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">        
+        <link href="favicon-32x32.png" rel="icon">
+    <title>Vaidik | Programmer</title>
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            border: none;
+            box-sizing: border-box;
+        }
+
+        nav {
+            display: flex;
+            padding: 40px 56px;
+            background: transparent;
+            user-select: none;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            z-index: 100;
+            transition: background .4s, padding .4s;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        nav span {
+            color: #cccccc;
+            font-weight: 700;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin-left: auto;
+            display: flex;
+        }
+
+        nav ul li:not(:first-child) {
+            margin-left: 32px;
+        }
+
+        nav._fixed {
+            background: #121212;
+            padding: 24px 48px;
+        }
+
+        #first {
+            height: 800px;
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+        }
+
+        #first::before {
+            display: block;
+            content: "";
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #4d0d12;
+            opacity: .2;
+        }
+
+        .heading {
+            text-align: center;
+            position: absolute;
+            top: 45%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .nav-anchor {
+            text-decoration: none;
+            color: #ffe2ff;
+            transition: opacity .2s;
+            font-size: 1.3rem;
+        }
+
+        .nav-anchor:hover {
+            opacity: .6;
+            color: #ffffff;
+            text-decoration-line: none;
+        }
+
+        .container-fluid {
+            background: url("https://wallpaperset.com/w/full/2/c/4/247373.jpg");
+        }
+
+        .sub-heading {
+            padding: 20px;
+        }
+
+        #second {
+            height: 500%;
+            width: 100%;
+            background-color: #060b20;
+            overflow: hidden;
+        }
+
+        #second h1 p {
+            color: #060b20;
+        }
+
+        footer {
+            background-color: #ffffff;
+            height: 10vh;
+            align-content: center;
+        }
+
+        .img-container {
+            /* position: relative;
+            height: 200px;
+            width: 200px; */
+            padding-top: 10px;
+        }
+
+        /*.bottom:hover {
+            -webkit-transform: scale(0.8);
+            -ms-transform: scale(0.8);
+            transform: scale(0.8);
+        }*/
+
+        img {
+            /* height: 350px;
+            width: 350px;
+            object-fit: cover;
+            overflow: hidden;
+            padding-top: 10px;
+            margin: 0 auto;*/
+            animation-name: img-ani;
+            animation-duration: 8s;
+            animation-timing-function: fade-out;
+        }
+
+        @keyframes img-ani {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        /*second section*/
+        #third {
+            width: 100%;
+            height: 300%;
+            background-color: #f1f3f8;
+        }
+
+        #third p {
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .profile {
+            position: relative;
+
+        }
+
+        .contain {
+            position: relative;
+            width: 50%;
+            padding: 20px;
+        }
+
+        .image {
+            display: block;
+            width: 300px;
+            height: 300px;
+            object-fit: cover;
+            box-shadow: 0 4px 8px 0 rgb(56, 54, 54), 0 6px 20px 0 rgb(56, 54, 54);
+        }
+
+        .overlay {
+            position: absolute;
+            top: 20px;
+            bottom: 70px;
+            left: 20px;
+            right: 0;
+            height: 300px;
+            width: 300px;
+            opacity: 0;
+            transition: .5s ease;
+            background-color: #121212;
+        }
+
+        .contain:hover .overlay {
+            opacity: .7;
+        }
+
+        .text {
+            color: white;
+            font-size: 20px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            bottom: 50%;
+            -webkit-transform: translate(-50%, -50%);
+            -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .row {
+            margin-top: 70px;
+            margin-bottom: 70px;
+        }
+
+        .proj-button {
+            margin: 0;
+            position: absolute;
+            top: 350px;
+            right: 500px;
+            text-decoration-line: none;
+        }
+
+        .link-button {
+            color: #ffffff;
+        }
+
+        .link-button:hover {
+            color: #121212;
+            text-decoration: none;
+        }
+
+        /*footer*/
+        .fab {
+            font-size: 50px;
+            padding: 25px;
+            color: #121212;
+            margin: 10px;
+        }
+
+        .fas {
+            font-size: 50px;
+            padding: 25px;
+            color: #121212;
+            margin: 10px;
+        }
+
+
+        .icons {
+            text-align: center;
+            width: 100%;
+        }
+
+        .copyright {
+            text-align: center;
+            font-weight: 500;
+        }
+
+        hr {
+            color: #121212;
+        }
+
+        /*Abput me sec*/
+        .about-heading {
+            text-align: center;
+            padding: 40px;
+        }
+
+        .profile-img {
+            margin-left: 50px;
+            object-fit: cover;
+            height: 300px;
+            width: 300px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+        #third h1 {
+            color: #060b20;
+            font-family: 'Roboto', sans-serif;
+            font-weight: 500;
+        }
+
+        #third p {
+            font-weight: 400;
+            font-size: 1.3rem;
+            text-shadow: 0 4px 8px 0 rgb(56, 54, 54), 0 6px 20px 0 rgb(56, 54, 54);
+            margin-left: 75px;
+            font-family: 'Roboto', sans-serif;        
+            }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <nav>
+            <span class="logo"><a class="nav-anchor" href="#first"> Vaidik Gupta</a></span>
+            <ul>
+                <li>
+                    <a class="nav-anchor" href="#third">about</a>
+                </li>
+                <li>
+                    <a class="nav-anchor" href="#second">projects</a>
+                </li>
+                <li>
+                    <a class="nav-anchor" href="#footer">contact</a>
+                </li>
+            </ul>
+        </nav>
+        <section id="first">
+            <div class="heading">
+                <h1>Vaidik Gupta</h1>
+                <h3 class="sub-heading">The Programmer</h3>
+            </div>
+
+        </section>
+    </div>
+    <section id="third">
+        <div class="about-heading">
+            <h1>About Me</h1>
+        </div>
+        <div class="row">
+            <div class="col-lg-3 col-sm-12">
+
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <img src="download.png" class="profile-img">
+            </div>
+            <div class="col-lg-3 col-sm-6">
+                <p>Hello there! I am Third Year Engineering Student currently studying in RamRao Adik Institute Of
+                    Technology(RAIT) College. </p>
+                <p>I'm very keen in Full Stack Web Development and I've been into various <a
+                        href="https://devpost.com/vaidikgupta2000" style="text-decoration:none;color:#b83b5e">
+                        Hackathons</a>. I've tried my hands into <a href="https://www.codechef.com/users/vaidikgupta"
+                        style="text-decoration:none;color:#b83b5e">competitive coding.</a></p>
+            </div>
+            <div class="col-lg-3 col-sm-12">
+
+            </div>
+        </div>
+
+    </section>
+
+
+
+
+    <section id="second">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-sm-2 col-md-3 col-lg-4">
+                    <div class="contain">
+                        <img src="Screenshot (7).png" alt="Avatar" class="image">
+                        <a href="https://github.com/vaidikg20000/todolist-on-liveservers">
+                            <div class="overlay">
+                                <div class="text">
+                                    <h4>To Do List</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-4">
+                    <div class="contain">
+                        <img src="Screenshot (5).png" alt="Avatar" class="image">
+                        <a href="https://github.com/vaidikg20000/dailyJournal">
+                            <div class="overlay">
+                                <div class="text">
+                                    <h4>Blog Site</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-6 col-lg-4">
+                    <div class="contain">
+                        <img src="weather.jpg" alt="Avatar" class="image">
+                        <a href="https://github.com/vaidikg20000/Weatherapp">
+                            <div class="overlay">
+                                <div class="text">
+                                    <h4>Weather App</h4>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <button type="button" class="btn btn-light btn-outline-light btn-lg proj-button"><a
+                            class="link-button" href="https://github.com/vaidikg20000?tab=repositories"> View all
+                            Projects</a></button>
+                </div>
+            </div>
+    </section>
+
+
+    <footer id="footer">
+        <div class="icons">
+            <a href="https://github.com/vaidikg20000"><i class="fab fa-github"> </i></a>
+            <a href="https://www.linkedin.com/in/vaidik-g-08b679102/"> <i class="fab fa-linkedin"></i></a>
+            <a href="mailto:vaidikgupta2000@gmail.com"><i class="fas fa-envelope"></i></a>
+        </div>
+        <p class="copyright">Copyright © Vaidik Gupta 2020 </p>
+    </footer>
+
+
+
+
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous">
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous">
+    </script>
+    <script src="/app.js"></script>
+</body>
+
+</html>

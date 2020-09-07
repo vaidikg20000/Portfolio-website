@@ -1,0 +1,22 @@
+
+
+
+.first{
+    background-image: url("https://blog.modernsetups.com/wp-content/uploads/2019/02/dark-purple-gradient-1024x576.png?x97945");
+    background-color: #cccccc;
+    height: 800px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+.bg-image{
+    text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
