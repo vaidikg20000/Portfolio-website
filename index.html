@@ -12,8 +12,10 @@
     <!--font awesome-->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
         integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">        
-        <link href="favicon-32x32.png" rel="icon">
+    <link
+        href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&family=Montserrat:wght@400;600&family=Roboto:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link href="favicon-32x32.png" rel="icon">
     <title>Vaidik | Programmer</title>
     <style>
         html {
@@ -61,6 +63,7 @@
             padding: 24px 48px;
         }
 
+
         #first {
             height: 800px;
             width: 100%;
@@ -92,6 +95,12 @@
             font-family: Arial, Helvetica, sans-serif;
         }
 
+        .intro-initials {
+            opacity: .2;
+            position: absolute;
+            font-size: 600%;
+        }
+
         .nav-anchor {
             text-decoration: none;
             color: #ffe2ff;
@@ -111,6 +120,9 @@
 
         .sub-heading {
             padding: 20px;
+            line-height: 1.2;
+            font-size: 250%;
+
         }
 
         #second {
@@ -303,15 +315,86 @@
             font-size: 1.3rem;
             text-shadow: 0 4px 8px 0 rgb(56, 54, 54), 0 6px 20px 0 rgb(56, 54, 54);
             margin-left: 75px;
-            font-family: 'Roboto', sans-serif;        
+            font-family: 'Roboto', sans-serif;
+        }
+
+        nav span a {
+            font-size: 500px;
+        }
+
+        .know-more {
+            display: block;
+            position: relative;
+            width: 180px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 18px;
+            top: 30px;
+            left: 20%;
+            font-family: sans-serif;
+            text-decoration: none;
+            color: #f1f3f8;
+            border: 2px solid #f1f3f8;
+            letter-spacing: 2px;
+            text-align: center;
+            position: relative;
+            transition: all .35s;
+            -webkit-animation: bounce 1s infinite alternate;
+            -moz-animation: bounce 1s infinite alternate;
+            animation: bounce 1s infinite alternate;
+        }
+
+        @-webkit-keyframes bounce {
+            to {
+                -webkit-transform: scale(1.2);
             }
+        }
+
+        @-moz-keyframes bounce {
+            to {
+                -moz-transform: scale(1.2);
+            }
+        }
+
+        @keyframes bounce {
+            to {
+                transform: scale(1.2);
+            }
+        }
+
+        .know-more:after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 100%;
+            background: #ff003b;
+            transition: all .35s;
+        }
+
+        .know-more span {
+            position: relative;
+            z-index: 2;
+        }
+
+        .know-more:hover {
+            color: #fff;
+            text-decoration: none;
+
+        }
+
+        .know-more:hover:after {
+            width: 100%;
+            color: #f1f3f8;
+        }
     </style>
 </head>
 
 <body>
     <div class="container-fluid">
         <nav>
-            <span class="logo"><a class="nav-anchor" href="#first"> Vaidik Gupta</a></span>
+            <span><a class="nav-anchor logo" href="#first"> Vaidik Gupta</a></span>
             <ul>
                 <li>
                     <a class="nav-anchor" href="#third">about</a>
@@ -326,8 +409,9 @@
         </nav>
         <section id="first">
             <div class="heading">
-                <h1>Vaidik Gupta</h1>
-                <h3 class="sub-heading">The Programmer</h3>
+                <h1 class="intro-initials"></h1>
+                <h3 class="sub-heading">Web Development</h3>
+                <a href="#third" class="know-more"><span>Know More</span></a>
             </div>
 
         </section>
@@ -347,7 +431,8 @@
                 <p>Hello there! I am Third Year Engineering Student currently studying in RamRao Adik Institute Of
                     Technology(RAIT) College. </p>
                 <p>I'm very keen in Full Stack Web Development and I've been into various <a
-                        href="https://devpost.com/vaidikgupta2000" style="text-decoration:none;color:#b83b5e" target="_blank">
+                        href="https://devpost.com/vaidikgupta2000" style="text-decoration:none;color:#b83b5e"
+                        target="_blank">
                         Hackathons</a>. I've tried my hands into <a href="https://www.codechef.com/users/vaidikgupta"
                         style="text-decoration:none;color:#b83b5e" target="_blank">competitive coding.</a></p>
             </div>
@@ -401,7 +486,8 @@
                         </a>
                     </div>
                     <button type="button" class="btn btn-light btn-outline-light btn-lg proj-button"><a
-                            class="link-button" target="_blank" href="https://github.com/vaidikg20000?tab=repositories" target="_blank"> View all
+                            class="link-button" target="_blank" href="https://github.com/vaidikg20000?tab=repositories"
+                            target="_blank"> View all
                             Projects</a></button>
                 </div>
             </div>
@@ -411,7 +497,8 @@
     <footer id="footer">
         <div class="icons">
             <a href="https://github.com/vaidikg20000" target="_blank"><i class="fab fa-github"> </i></a>
-            <a href="https://www.linkedin.com/in/vaidik-g-08b679102/" target="_blank"> <i class="fab fa-linkedin"></i></a>
+            <a href="https://www.linkedin.com/in/vaidik-g-08b679102/" target="_blank"> <i
+                    class="fab fa-linkedin"></i></a>
             <a href="mailto:vaidikgupta2000@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
         </div>
         <p class="copyright">Copyright © Vaidik Gupta 2020 </p>
